@@ -1,7 +1,11 @@
 /*
-Program:
-Date: 
+Program: DevBoard_x910CF.c
+Date: 8/18/2014
 Description: 
+This is the power sequencing handling for the Plug in Evaluation board. The board takes in a couple of I/O
+and then turns on/off the module, including the VBUS signal which is handled externally with a FET array. 
+
+http://www.janus-rc.com/terminuscf.html
 
 */
 
