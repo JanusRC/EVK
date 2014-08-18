@@ -1,0 +1,6 @@
+set -tmpdir "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/xst/projnav.tmp"
+set -xsthdpdir "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/xst"
+elaborate
+-lso Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect.lso
+-ifn ModeSelect.prj
+-ifmt mixed

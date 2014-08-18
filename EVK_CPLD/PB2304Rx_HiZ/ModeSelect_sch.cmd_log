@@ -1,0 +1,7 @@
+xst -ise "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/PB2304Rx_HiZ.ise" -intstyle ise -ifn "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.xst" -ofn "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.syr" 
+ngdbuild -ise "PB2304Rx_HiZ.ise" -intstyle ise -dd _ngo -i -p xc2c64a-QFG48-5 "ModeSelect_sch.ngc" ModeSelect_sch.ngd  
+cpldfit -ise "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/PB2304Rx_HiZ.ise" -intstyle ise -p xc2c64a-5-QFG48 -ofmt vhdl -optimize density -htmlrpt -loc on -slew fast -init low -inputs 32 -pterms 28 -unused pullup -terminate float -iostd LVCMOS33 ModeSelect_sch.ngd 
+XSLTProcess -ise "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/PB2304Rx_HiZ.ise" ModeSelect_sch_build.xml 
+tsim -ise "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/PB2304Rx_HiZ.ise" -intstyle ise ModeSelect_sch ModeSelect_sch.nga 
+taengine -ise "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/PB2304Rx_HiZ.ise" -intstyle ise -f ModeSelect_sch -w --format html1 -l ModeSelect_sch_html/tim/timing_report.htm 
+hprep6 -ise "Z:/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/PB2304Rx_HiZ.ise" -s IEEE1149 -i ModeSelect_sch 

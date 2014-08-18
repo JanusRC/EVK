@@ -1,0 +1,191 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="paths.js"></script><script src="eqns.js"></script><script>
+      var design = "ModeSelect_sch";
+      var device = "XC2C64A";
+      signals = new Array("FORCEON_LD0","FORCEON_LD1","GPS_LD_TX","GPS_RX","GSM_DTR","GSM_LD_CTS","GSM_LD_DCD","GSM_LD_DSR","GSM_LD_RING","GSM_LD_RX","GSM_RTS","GSM_TX","SERVICE_OUT","TRACE_LD_TX","TRACE_RX","nFORCEOFF_LD0","nFORCEOFF_LD1");
+      sigNegs = new Array("ON","ON","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","OFF","ON","ON");
+      sigTypes = new Array("","","","","","","","","","","","","","","","","");
+
+      
+           iostyle["SERVICE_IN"]=new Array("PU");
+        
+           iostyle["MODE0_SPECSIG"]=new Array("PU");
+        
+           iostyle["MODE1_SPECSIG"]=new Array("PU");
+        
+        specSig["MODE0_SPECSIG"]=new Array("MODE<0>");
+      
+        specSig["MODE1_SPECSIG"]=new Array("MODE<1>");
+      
+            pterms["FB1_7"]=new Array("MODE0_SPECSIG");
+          
+            pterms["FB1_43"]=new Array("GSM_LD_TX");
+          
+            pterms["FB1_46"]=new Array("GSM_LD_DTR");
+          
+            pterms["FB2_7"]=new Array("MODE0_SPECSIG");
+          
+            pterms["FB2_10"]=new Array("GSM_RX");
+          
+            pterms["FB2_13"]=new Array("GSM_DSR");
+          
+            pterms["FB2_16"]=new Array("GSM_CTS");
+          
+            pterms["FB2_19"]=new Array("GSM_RING");
+          
+            pterms["FB2_22"]=new Array("GSM_DCD");
+          
+            pterms["FB2_43"]=new Array("TRACE_TX");
+          
+            pterms["FB2_46"]=new Array("GPS_TX");
+          
+            pterms["FB3_0"]=new Array("GPS_TX","/MODE1_SPECSIG");
+          
+            pterms["FB3_1"]=new Array("MODE1_SPECSIG","TRACE_LD_RX");
+          
+            pterms["FB3_7"]=new Array("MODE0_SPECSIG");
+          
+            pterms["FB3_10"]=new Array("GSM_LD_RTS");
+          
+            pterms["FB3_22"]=new Array("SERVICE_IN");
+          
+            pterms["FB4_0"]=new Array("TRACE_TX","/MODE1_SPECSIG");
+          
+            pterms["FB4_1"]=new Array("MODE1_SPECSIG","GPS_LD_RX");
+          
+            pterms["FB4_7"]=new Array("MODE0_SPECSIG");
+          
+          d1["GSM_TX"]=new Array("FB1_43");
+          
+              trst["GSM_TX"]=new Array("FB1_7");
+              
+          d1["GSM_DTR"]=new Array("FB1_46");
+          
+              trst["GSM_DTR"]=new Array("FB1_7");
+              
+          d1["GSM_LD_RX"]=new Array("FB2_10");
+          
+              trst["GSM_LD_RX"]=new Array("FB2_7");
+              
+          d1["GSM_LD_DSR"]=new Array("FB2_13");
+          
+              trst["GSM_LD_DSR"]=new Array("FB2_7");
+              
+          d1["GSM_LD_CTS"]=new Array("FB2_16");
+          
+              trst["GSM_LD_CTS"]=new Array("FB2_7");
+              
+          d1["GSM_LD_RING"]=new Array("FB2_19");
+          
+              trst["GSM_LD_RING"]=new Array("FB2_7");
+              
+          d1["GSM_LD_DCD"]=new Array("FB2_22");
+          
+              trst["GSM_LD_DCD"]=new Array("FB2_7");
+              
+          d1["TRACE_LD_TX"]=new Array("FB2_43");
+          
+              trst["TRACE_LD_TX"]=new Array("FB2_7");
+              
+          d1["GPS_LD_TX"]=new Array("FB2_46");
+          
+              trst["GPS_LD_TX"]=new Array("FB2_7");
+              
+          d1["GSM_RTS"]=new Array("FB3_10");
+          
+              trst["GSM_RTS"]=new Array("FB3_7");
+              
+          d2["TRACE_RX"]=new Array("FB3_0","FB3_1");
+          
+              trst["TRACE_RX"]=new Array("FB3_7");
+              
+          d1["SERVICE_OUT"]=new Array("FB3_22");
+          
+              trst["SERVICE_OUT"]=new Array("FB3_7");
+              
+          d2["nFORCEOFF_LD0"]=new Array("GND");
+          
+              trst["nFORCEOFF_LD0"]=new Array("FB4_7");
+              
+          d2["FORCEON_LD0"]=new Array("GND");
+          
+              trst["FORCEON_LD0"]=new Array("FB4_7");
+              
+          d2["nFORCEOFF_LD1"]=new Array("GND");
+          
+              trst["nFORCEOFF_LD1"]=new Array("FB4_7");
+              
+          d2["FORCEON_LD1"]=new Array("GND");
+          
+              trst["FORCEON_LD1"]=new Array("FB4_7");
+              
+          d2["GPS_RX"]=new Array("FB4_0","FB4_1");
+          
+              trst["GPS_RX"]=new Array("FB4_7");
+              
+
+      uimSignals = new Array();
+
+      uimSigNegs = new Array();
+
+      uimPterms = new Array();
+      
+
+      
+        function getEqnList() {
+          var str = "<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>";
+          str += "<center><h3>Equations</h3></center>";
+          str += "<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>";
+          for (s=0; s<uimSignals.length; s++) {
+            str += "<tr><td>";
+            str += retUimEqn(uimSignals[s]);
+            str += "</td></tr>";
+          }
+          for (s=0; s<signals.length; s++) {
+            str += "<tr><td>";
+            str += retEqn(signals[s]);
+            str += "</td></tr>";
+          }
+
+          var legend = retLegend();
+		      if (legend != "") {
+		        str += "<tr><td>" + legend + "</td></tr>";
+		      }
+
+          str += "</table>";
+          str += "<form><span class='pgRef'>";
+
+          if (!parent.leftnav.IsNS()) {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><input type='button' value='back to top' ";
+            str += "onclick='javascript:parent.leftnav.showEqnAll()' ";
+            str += "onmouseover=\"window.status='goto top of page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<input type='button' value='print page' ";
+            str += "onclick='javascript:window.print()' ";
+            str += "onmouseover=\"window.status='print page'; return true;\" ";
+            str += "onmouseout=\"window.status=''\">";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+          else {
+            str += "<table width='90%' align='center'>";
+            str += "<tr><td align='left'><a href='javascript:parent.leftnav.showEqnAll()'>back to top</a>";
+            str += "</td>";
+            str += "<td align='right'>";
+            str += "<a href='javascript:window.print()'>";
+            str += "print page</a>";
+            str += "</td>";
+            str += "</tr></table>";
+          }
+
+          str += "</span></form>";
+          str += "</body></html>";
+          return str;
+        }
+      
+    </script>
+</head></html>

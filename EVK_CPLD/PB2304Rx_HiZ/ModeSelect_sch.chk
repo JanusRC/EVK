@@ -1,0 +1,72 @@
+
+----------------------------------------
+|  P a r t i t i o n    S u c c e e d  |
+----------------------------------------
+0 Group(s)
+
+----------------- B l o c k 0 ------------------
+PLApt(3/56), Fanin(3/38), Clk(0/3), Bct(1/4), Pin(7/7), Mcell(2/16)
+PLApts[3/47] () () () () () () () 1 () () () () () () () () () () () () () () () () () () () () () () () () 
+             () () () () () () () () () () () 8 () () 6
+Fanins[ 3] GSM_LD_DTR.p GSM_LD_TX.p MODE<0>.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=1) MODE<0> ;
+vref: [0]
+Signal[ 7] [GSM_DTR(61),GSM_DTR(46)] [GSM_TX(60),GSM_TX(47)] [GSM_CTS(2)] [GSM_DCD(48)] [GSM_DSR(4)]  
+           [GSM_RING(1)] [GSM_RX(5)] 
+Signal[ 7] [ 0:  ][ 1: GSM_RX(5)  ][ 2: GSM_DSR(4)  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8: GSM_CTS(2)  ] 
+           [ 9: GSM_RING(1)  ][ 10: GSM_DCD(48)  ][ 11: GSM_TX(60) GSM_TX(47)  ][ 12: GSM_DTR(61)  
+           GSM_DTR(46)  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 1 ------------------
+PLApt(8/56), Fanin(8/38), Clk(0/3), Bct(1/4), Pin(10/10), Mcell(7/16)
+PLApts[8/47] () () () () () () () 1 () () 10 () () 5 () () 3 () () 9 () () 4 () () () () () () () () () () () 
+             () () () () () () () () () 12 () () 2
+Fanins[ 8] GPS_TX.p GSM_CTS.p GSM_DCD.p GSM_DSR.p GSM_RING.p GSM_RX.p MODE<0>.p TRACE_TX.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=1) MODE<0> ;
+vref: [0]
+Signal[10] [GPS_LD_TX(77),GPS_LD_TX(15)] [GSM_LD_CTS(67),GSM_LD_CTS(8)] [GSM_LD_DCD(69),GSM_LD_DCD(10)]  
+           [GSM_LD_DSR(66),GSM_LD_DSR(7)] [GSM_LD_RING(68),GSM_LD_RING(9)] [GSM_LD_RX(65),GSM_LD_RX(6)]  
+           [TRACE_LD_TX(76),TRACE_LD_TX(14)] [GSM_LD_DTR(12)] [GSM_LD_RTS(13)] [GSM_LD_TX(11)] 
+Signal[10] [ 0: GSM_LD_RX(65) GSM_LD_RX(6)  ][ 1: GSM_LD_DSR(66) GSM_LD_DSR(7)  ][ 2: GSM_LD_CTS(67)  
+           GSM_LD_CTS(8)  ][ 3: GSM_LD_RING(68) GSM_LD_RING(9)  ][ 4: GSM_LD_DCD(69) GSM_LD_DCD(10)  ][ 5:  ] 
+           [ 6: GSM_LD_TX(11)  ][ 7: GSM_LD_DTR(12)  ][ 8:  ][ 9: GSM_LD_RTS(13)  ][ 10:  ][ 11:  
+           TRACE_LD_TX(76) TRACE_LD_TX(14)  ][ 12: GPS_LD_TX(77) GPS_LD_TX(15)  ][ 13:  ][ 14:  ][ 15:  ]
+----------------- B l o c k 2 ------------------
+PLApt(5/56), Fanin(6/38), Clk(0/3), Bct(1/4), Pin(7/11), Mcell(3/16)
+PLApts[5/23] 13 16 () () () () () 1 () () 7 () () () () () () () () () () () 11
+Fanins[ 6] GPS_TX.p GSM_LD_RTS.p MODE<0>.p MODE<1>.p SERVICE_IN.p TRACE_LD_RX.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=1) MODE<0> ;
+vref: [0]
+Signal[ 7] [TRACE_RX(83),TRACE_RX(43)] [GSM_RTS(81),GSM_RTS(45)] [SERVICE_OUT(85),SERVICE_OUT(39)]  
+           [MODE<0>(37)] [MODE<1>(36)] [SERVICE_IN(38)] [TRACE_TX(44)] 
+Signal[ 7] [ 0: GSM_RTS(81) GSM_RTS(45)  ][ 1: TRACE_TX(44)  ][ 2: TRACE_RX(83) TRACE_RX(43)  ][ 3:  ][ 4:  
+           SERVICE_OUT(85) SERVICE_OUT(39)  ][ 5: SERVICE_IN(38)  ][ 6:  ][ 7:  ][ 8: MODE<0>(37)  ][ 9:  
+           MODE<1>(36)  ][ 10: (35)  ][ 11: (34)  ][ 12:  ][ 13: (33)  ][ 14: (32)  ][ 15:  ]
+----------------- B l o c k 3 ------------------
+PLApt(3/56), Fanin(4/38), Clk(0/3), Bct(1/4), Pin(8/9), Mcell(5/16)
+PLApts[3/8] 14 15 () () () () () 1
+Fanins[ 4] GPS_LD_RX.p MODE<0>.p MODE<1>.p TRACE_TX.p
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: (pt=1) MODE<0> ;
+vref: [0]
+Signal[ 8] [GPS_RX(110),GPS_RX(28)] [FORCEON_LD0(106),FORCEON_LD0(24)] [FORCEON_LD1(108),FORCEON_LD1(26)]  
+           [nFORCEOFF_LD0(103),nFORCEOFF_LD0(20)] [nFORCEOFF_LD1(107),nFORCEOFF_LD1(25)] [GPS_LD_RX(18)]  
+           [GPS_TX(27)] [TRACE_LD_RX(17)] 
+Signal[ 8] [ 0: TRACE_LD_RX(17)  ][ 1: GPS_LD_RX(18)  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6: nFORCEOFF_LD0(103)  
+           nFORCEOFF_LD0(20)  ][ 7:  ][ 8:  ][ 9: FORCEON_LD0(106) FORCEON_LD0(24)  ][ 10:  
+           nFORCEOFF_LD1(107) nFORCEOFF_LD1(25)  ][ 11: FORCEON_LD1(108) FORCEON_LD1(26)  ][ 12: GPS_TX(27)  
+            ][ 13: GPS_RX(110) GPS_RX(28)  ][ 14:  ][ 15: (30)  ]

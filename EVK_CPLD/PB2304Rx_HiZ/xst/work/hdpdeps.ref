@@ -1,0 +1,17 @@
+V3 8
+FL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect.vhd" 2011/07/07.10:49:30 L.68
+EN work/ModeSelect 1310050645 \
+      FL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect.vhd" \
+      PB ieee/std_logic_1164 1258431800 PB ieee/std_logic_arith 1258431801 \
+      PB ieee/STD_LOGIC_UNSIGNED 1258431802
+AR work/ModeSelect/Behavioral 1310050646 \
+      FL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect.vhd" \
+      EN work/ModeSelect 1310050645
+FL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.vhf" 2011/07/07.10:50:00 L.68
+EN work/ModeSelect_sch 1310050647 \
+      FL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.vhf" \
+      PB ieee/std_logic_1164 1258431800 PB ieee/NUMERIC_STD 1258431801 LB UNISIM \
+      PH unisim/VCOMPONENTS 1258431801
+AR work/ModeSelect_sch/BEHAVIORAL 1310050648 \
+      FL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.vhf" \
+      EN work/ModeSelect_sch 1310050647 CP ModeSelect

@@ -1,0 +1,77 @@
+Release 8.1i - Fit L.68
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 7- 7-2011  9:57AM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The comma ','
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  ModeSelect_sch.ngd
+output file: ModeSelect_sch_pad.csv
+Part type:   xc2c64a
+Speed grade: -5
+Package:     qfg48
+
+Pinout by Pin Number:
+
+-----,-----,-----,-----,-----,-----,-----,-----,-----,-----,
+Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,{blank},Slew Rate,Termination,{blank},Voltage,Constraint,
+P1,GSM_RING,I,I/O/GTS0,INPUT,LVCMOS33,2,,FAST,,,,
+P2,GSM_CTS,I,I/O/GTS1,INPUT,LVCMOS33,2,,FAST,,,,
+P3,,VCCAUX,VAUX,,,,,,,,,,
+P4,GSM_DSR,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P5,GSM_RX,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P6,GSM_LD_RX,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P7,GSM_LD_DSR,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P8,GSM_LD_CTS,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P9,GSM_LD_RING,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P10,GSM_LD_DCD,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P11,GSM_LD_TX,I,I/O/GCK0,INPUT,LVCMOS33,1,,FAST,,,,
+P12,GSM_LD_DTR,I,I/O/GCK1,INPUT,LVCMOS33,1,,FAST,,,,
+P13,GSM_LD_RTS,I,I/O/GCK2,INPUT,LVCMOS33,1,,FAST,,,,
+P14,TRACE_LD_TX,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P15,GPS_LD_TX,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P16,GND,,GND,,,,,,,,,,
+P17,TRACE_LD_RX,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
+P18,GPS_LD_RX,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
+P19,,VCCIO-3.3,VCCIO,,,1,,,,,,,
+P20,nFORCEOFF_LD0,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P21,TDI,,TDI,,,,,,,,,,
+P22,TMS,,TMS,,,,,,,,,,
+P23,TCK,,TCK,,,,,,,,,,
+P24,FORCEON_LD0,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P25,nFORCEOFF_LD1,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P26,FORCEON_LD1,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P27,GPS_TX,I,I/O,INPUT,LVCMOS33,1,,FAST,,,,
+P28,GPS_RX,O,I/O,OUTPUT,LVCMOS33,1,,FAST,,,,
+P29,,VCC,VCC,,,,,,,,,,
+P30,WPU,,I/O,,,1,,,,,,,
+P31,GND,,GND,,,,,,,,,,
+P32,WPU,,I/O,,,2,,,,,,,
+P33,WPU,,I/O,,,2,,,,,,,
+P34,WPU,,I/O,,,2,,,,,,,
+P35,WPU,,I/O,,,2,,,,,,,
+P36,MODE<1>,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P37,MODE<0>,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P38,SERVICE_IN,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P39,SERVICE_OUT,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
+P40,TDO,,TDO,,,,,,,,,,
+P41,GND,,GND,,,,,,,,,,
+P42,,VCCIO-3.3,VCCIO,,,2,,,,,,,
+P43,TRACE_RX,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
+P44,TRACE_TX,I,I/O,INPUT,LVCMOS33,2,,FAST,,,,
+P45,GSM_RTS,O,I/O,OUTPUT,LVCMOS33,2,,FAST,,,,
+P46,GSM_DTR,O,I/O/GSR,OUTPUT,LVCMOS33,2,,FAST,,,,
+P47,GSM_TX,O,I/O/GTS2,OUTPUT,LVCMOS33,2,,FAST,,,,
+P48,GSM_DCD,I,I/O/GTS3,INPUT,LVCMOS33,2,,FAST,,,,
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

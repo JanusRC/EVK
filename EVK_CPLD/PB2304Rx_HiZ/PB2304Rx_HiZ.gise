@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="PB2304Rx_HiZ.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name="ModeSelect.lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ModeSelect.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ModeSelect.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ModeSelect.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ModeSelect.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ModeSelect_TB_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ModeSelect_TB_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="ModeSelect_TB_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ModeSelect_TB_stx.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="ModeSelect_sch.bld"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CHK" xil_pn:name="ModeSelect_sch.chk"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="ModeSelect_sch.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_CXT" xil_pn:name="ModeSelect_sch.cxt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_GYD" xil_pn:name="ModeSelect_sch.gyd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_JEDEC" xil_pn:name="ModeSelect_sch.jed"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="ModeSelect_sch.jhd"/>
+    <file xil_pn:fileType="FILE_LFP" xil_pn:name="ModeSelect_sch.lfp"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ModeSelect_sch.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="ModeSelect_sch.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MFD" xil_pn:name="ModeSelect_sch.mfd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGA" xil_pn:name="ModeSelect_sch.nga"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ModeSelect_sch.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="ModeSelect_sch.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="ModeSelect_sch.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="ModeSelect_sch.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PNX" xil_pn:name="ModeSelect_sch.pnx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ModeSelect_sch.prj"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ModeSelect_sch.rpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="ModeSelect_sch.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="ModeSelect_sch.syr"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ModeSelect_sch.tim"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ModeSelect_sch.tspec"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="ModeSelect_sch.vhf">
+      <branch xil_pn:name="Implementation"/>
+      <branch xil_pn:name="BehavioralSim"/>
+    </file>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VM6" xil_pn:name="ModeSelect_sch.vm6"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ModeSelect_sch.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="ModeSelect_sch.xst"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="ModeSelect_sch_build.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="ModeSelect_sch_html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ModeSelect_sch_ngdbuild.xrpt"/>
+    <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="ModeSelect_sch_pad.csv"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="ModeSelect_sch_summary.html"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ModeSelect_sch_vhdl.prj"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="ModeSelect_sch_xst.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BCD" xil_pn:name="PB2304Rx_HiZ_xdb/cst.xbcd"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1303154281" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1303154281">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1303155226" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1303155226">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ModeSelect.vhd"/>
+      <outfile xil_pn:name="ModeSelect_TB.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1303154282" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1303154281">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1303155232" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1303155232">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1303155236" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1303155232">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1303155237" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1303155236">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1289419550" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1289419549">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050642" xil_pn:in_ck="-6824462159576618258" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-2825444557628526618" xil_pn:start_ts="1310050640">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ModeSelect_sch.vhf"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050652" xil_pn:in_ck="7633087106515074185" xil_pn:name="TRANEXT_xstsynthesize_xbr" xil_pn:prop_ck="5807920448843080645" xil_pn:start_ts="1310050642">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ModeSelect_sch.cmd_log"/>
+      <outfile xil_pn:name="ModeSelect_sch.jhd"/>
+      <outfile xil_pn:name="ModeSelect_sch.lso"/>
+      <outfile xil_pn:name="ModeSelect_sch.ngc"/>
+      <outfile xil_pn:name="ModeSelect_sch.ngr"/>
+      <outfile xil_pn:name="ModeSelect_sch.prj"/>
+      <outfile xil_pn:name="ModeSelect_sch.stx"/>
+      <outfile xil_pn:name="ModeSelect_sch.syr"/>
+      <outfile xil_pn:name="ModeSelect_sch.xst"/>
+      <outfile xil_pn:name="ModeSelect_sch_summary.html"/>
+      <outfile xil_pn:name="ModeSelect_sch_vhdl.prj"/>
+      <outfile xil_pn:name="ModeSelect_sch_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050653" xil_pn:in_ck="1237315031627785233" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1936699687773285668" xil_pn:start_ts="1310050652">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="PB2304Rx_HiZ_xdb/cst.xbcd"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050663" xil_pn:in_ck="-8648452975287221127" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="-7604691816596684776" xil_pn:start_ts="1310050653">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="ModeSelect_sch.bld"/>
+      <outfile xil_pn:name="ModeSelect_sch.cmd_log"/>
+      <outfile xil_pn:name="ModeSelect_sch.ngd"/>
+      <outfile xil_pn:name="ModeSelect_sch_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050683" xil_pn:in_ck="-6824462159576623575" xil_pn:name="TRANEXT_vm6File_xbr" xil_pn:prop_ck="4798544920288969319" xil_pn:start_ts="1310050663">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ModeSelect_sch.chk"/>
+      <outfile xil_pn:name="ModeSelect_sch.cxt"/>
+      <outfile xil_pn:name="ModeSelect_sch.gyd"/>
+      <outfile xil_pn:name="ModeSelect_sch.log"/>
+      <outfile xil_pn:name="ModeSelect_sch.mfd"/>
+      <outfile xil_pn:name="ModeSelect_sch.nga"/>
+      <outfile xil_pn:name="ModeSelect_sch.pad"/>
+      <outfile xil_pn:name="ModeSelect_sch.pnx"/>
+      <outfile xil_pn:name="ModeSelect_sch.rpt"/>
+      <outfile xil_pn:name="ModeSelect_sch.vm6"/>
+      <outfile xil_pn:name="ModeSelect_sch.xml"/>
+      <outfile xil_pn:name="ModeSelect_sch_build.xml"/>
+      <outfile xil_pn:name="ModeSelect_sch_html"/>
+      <outfile xil_pn:name="ModeSelect_sch_pad.csv"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050686" xil_pn:in_ck="-6824462159576614711" xil_pn:name="TRANEXT_crtProg_xbr" xil_pn:prop_ck="2365158574651375362" xil_pn:start_ts="1310050683">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ModeSelect_sch.jed"/>
+    </transform>
+    <transform xil_pn:end_ts="1310050683" xil_pn:in_ck="-6824462159576614711" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1310050681">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+  </transforms>
+
+</generated_project>

@@ -1,0 +1,3 @@
+MODULE ModeSelect_sch
+	SUBMODULE ModeSelect
+		INSTANCE Mode_Sel

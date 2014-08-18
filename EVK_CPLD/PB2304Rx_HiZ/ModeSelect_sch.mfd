@@ -1,0 +1,185 @@
+MDF Database:  version 1.0
+MDF_INFO | ModeSelect_sch | XC2C64A-5-QFG48
+MACROCELL | 3 | 9 | FORCEON_LD0_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 0
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   !FORCEON_LD0 = Gnd;	// (0 pt, 0 inp)
+    FORCEON_LD0.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 3 | 11 | FORCEON_LD1_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 0
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   !FORCEON_LD1 = Gnd;	// (0 pt, 0 inp)
+    FORCEON_LD1.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 12 | GPS_LD_TX_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GPS_TX
+INPUTP | 1 | 48
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GPS_LD_TX = GPS_TX;	// (1 pt, 1 inp)
+    GPS_LD_TX.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 3 | 13 | GPS_RX_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 3 | TRACE_TX  | MODE<1>  | GPS_LD_RX
+INPUTP | 3 | 72 | 61 | 32
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   GPS_RX = TRACE_TX & !MODE<1>
+	# MODE<1> & GPS_LD_RX;	// (2 pt, 3 inp)
+    GPS_RX.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 0 | 12 | GSM_DTR_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_LD_DTR
+INPUTP | 1 | 20
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_DTR = GSM_LD_DTR;	// (1 pt, 1 inp)
+    GSM_DTR.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 2 | GSM_LD_CTS_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_CTS
+INPUTP | 1 | 2
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_LD_CTS = GSM_CTS;	// (1 pt, 1 inp)
+    GSM_LD_CTS.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 4 | GSM_LD_DCD_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_DCD
+INPUTP | 1 | 81
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_LD_DCD = GSM_DCD;	// (1 pt, 1 inp)
+    GSM_LD_DCD.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 1 | GSM_LD_DSR_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_DSR
+INPUTP | 1 | 9
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_LD_DSR = GSM_DSR;	// (1 pt, 1 inp)
+    GSM_LD_DSR.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 3 | GSM_LD_RING_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_RING
+INPUTP | 1 | 1
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_LD_RING = GSM_RING;	// (1 pt, 1 inp)
+    GSM_LD_RING.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 0 | GSM_LD_RX_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_RX
+INPUTP | 1 | 10
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_LD_RX = GSM_RX;	// (1 pt, 1 inp)
+    GSM_LD_RX.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 2 | 0 | GSM_RTS_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_LD_RTS
+INPUTP | 1 | 23
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_RTS = GSM_LD_RTS;	// (1 pt, 1 inp)
+    GSM_RTS.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 0 | 11 | GSM_TX_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | GSM_LD_TX
+INPUTP | 1 | 19
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   GSM_TX = GSM_LD_TX;	// (1 pt, 1 inp)
+    GSM_TX.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 2 | 4 | SERVICE_OUT_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | SERVICE_IN
+INPUTP | 1 | 65
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   SERVICE_OUT = SERVICE_IN;	// (1 pt, 1 inp)
+    SERVICE_OUT.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 1 | 11 | TRACE_LD_TX_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 1 | TRACE_TX
+INPUTP | 1 | 72
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   TRACE_LD_TX = TRACE_TX;	// (1 pt, 1 inp)
+    TRACE_LD_TX.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 2 | 2 | TRACE_RX_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 3 | GPS_TX  | MODE<1>  | TRACE_LD_RX
+INPUTP | 3 | 48 | 61 | 31
+LCT | 1 | 5 | Internal_Name
+EQ | 3 | 
+   TRACE_RX = GPS_TX & !MODE<1>
+	# MODE<1> & TRACE_LD_RX;	// (2 pt, 3 inp)
+    TRACE_RX.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 3 | 6 | nFORCEOFF_LD0_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 0
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   !nFORCEOFF_LD0 = Gnd;	// (0 pt, 0 inp)
+    nFORCEOFF_LD0.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+MACROCELL | 3 | 10 | nFORCEOFF_LD1_MC
+ATTRIBUTES | 1141113602 | 0
+INPUTS | 0
+LCT | 1 | 5 | Internal_Name
+EQ | 2 | 
+   !nFORCEOFF_LD1 = Gnd;	// (0 pt, 0 inp)
+    nFORCEOFF_LD1.OE = MODE<0>;	// CTE	(1 pt, 1 inp)
+
+PIN | MODE<0> | 64 | 64 | LVCMOS33 | 62 | 0
+PIN | GPS_LD_RX | 64 | 0 | LVCMOS33 | 32 | 1 | 3 | 13
+PIN | GPS_TX | 64 | 0 | LVCMOS33 | 48 | 2 | 1 | 12 | 2 | 2
+PIN | TRACE_TX | 64 | 0 | LVCMOS33 | 72 | 2 | 3 | 13 | 1 | 11
+PIN | MODE<1> | 64 | 64 | LVCMOS33 | 61 | 2 | 3 | 13 | 2 | 2
+PIN | GSM_CTS | 64 | 0 | LVCMOS33 | 2 | 1 | 1 | 2
+PIN | GSM_DCD | 64 | 0 | LVCMOS33 | 81 | 1 | 1 | 4
+PIN | GSM_DSR | 64 | 0 | LVCMOS33 | 9 | 1 | 1 | 1
+PIN | GSM_LD_DTR | 64 | 0 | LVCMOS33 | 20 | 1 | 0 | 12
+PIN | GSM_RING | 64 | 0 | LVCMOS33 | 1 | 1 | 1 | 3
+PIN | GSM_LD_RTS | 64 | 0 | LVCMOS33 | 23 | 1 | 2 | 0
+PIN | GSM_RX | 64 | 0 | LVCMOS33 | 10 | 1 | 1 | 0
+PIN | GSM_LD_TX | 64 | 0 | LVCMOS33 | 19 | 1 | 0 | 11
+PIN | SERVICE_IN | 64 | 64 | LVCMOS33 | 65 | 1 | 2 | 4
+PIN | TRACE_LD_RX | 64 | 0 | LVCMOS33 | 31 | 1 | 2 | 2
+PIN | FORCEON_LD0 | 536871040 | 0 | LVCMOS33 | 44
+PIN | FORCEON_LD1 | 536871040 | 0 | LVCMOS33 | 47
+PIN | GPS_LD_TX | 536871040 | 0 | LVCMOS33 | 26
+PIN | GPS_RX | 536871040 | 0 | LVCMOS33 | 49
+PIN | GSM_DTR | 536871040 | 0 | LVCMOS33 | 78
+PIN | GSM_LD_CTS | 536871040 | 0 | LVCMOS33 | 14
+PIN | GSM_LD_DCD | 536871040 | 0 | LVCMOS33 | 16
+PIN | GSM_LD_DSR | 536871040 | 0 | LVCMOS33 | 13
+PIN | GSM_LD_RING | 536871040 | 0 | LVCMOS33 | 15
+PIN | GSM_LD_RX | 536871040 | 0 | LVCMOS33 | 12
+PIN | GSM_RTS | 536871040 | 0 | LVCMOS33 | 73
+PIN | GSM_TX | 536871040 | 0 | LVCMOS33 | 80
+PIN | SERVICE_OUT | 536871040 | 0 | LVCMOS33 | 66
+PIN | TRACE_LD_TX | 536871040 | 0 | LVCMOS33 | 25
+PIN | TRACE_RX | 536871040 | 0 | LVCMOS33 | 71
+PIN | nFORCEOFF_LD0 | 536871040 | 0 | LVCMOS33 | 38
+PIN | nFORCEOFF_LD1 | 536871040 | 0 | LVCMOS33 | 46

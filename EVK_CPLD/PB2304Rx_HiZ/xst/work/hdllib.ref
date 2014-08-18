@@ -1,0 +1,4 @@
+EN modeselect_sch NULL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.vhf" sub00/vhpl02 1310050647
+AR modeselect_sch behavioral "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect_sch.vhf" sub00/vhpl03 1310050648
+EN modeselect NULL "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect.vhd" sub00/vhpl00 1310050645
+AR modeselect behavioral "//xeon/data/M2MProducts/M2M/Terminus_Family/Plug-in Modules/CF_Eval_Board/Firmware/PB2304Rx_HiZ/ModeSelect.vhd" sub00/vhpl01 1310050646
