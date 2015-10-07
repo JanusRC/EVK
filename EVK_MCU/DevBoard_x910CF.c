@@ -1,11 +1,7 @@
 /*
-Program: DevBoard_x910CF.c
-Date: 8/18/2014
+Program:
+Date: 
 Description: 
-This is the power sequencing handling for the Plug in Evaluation board. The board takes in a couple of I/O
-and then turns on/off the module, including the VBUS signal which is handled externally with a FET array. 
-
-http://www.janus-rc.com/terminuscf.html
 
 */
 
@@ -13,136 +9,112 @@ http://www.janus-rc.com/terminuscf.html
 #include "DevBoard_x910CF.h"
 
 
-/*
-In AVR-GCC, a word is two bytes while a block is an arbitrary number of bytes which you supply (think string buffers). 
-
-uint8_t eeprom_read_byte (const uint8_t *addr)
-void eeprom_write_byte (uint8_t *addr, uint8_t value)
-uint16_t eeprom_read_word (const uint16_t *addr)
-void eeprom_write_word (uint16_t *addr, uint16_t value)
-void eeprom_read_block (void *pointer_ram, const void *pointer_eeprom, size_t n)
-void eeprom_write_block (void *pointer_eeprom, const void *pointer_ram, size_t n) 
-*/
-
-//Defining the CPU speed internally
-//#define F_CPU (128000UL)
-#define ON (true)
-#define OFF (false)
-
-//Defining the EEPROM address for the auto-on bit
-//#define EEPADDR 0x46
-
-
 /****************
 Global Variables
 ****************/
 
 
-
 int main(void)
 {
 
-	bool IsPWRMONOn = false; //Initialize to OFF
-	bool AutoOn = false;	//Initialize to OFF
-	bool IsVBUSOn = false; //Initialize to OFF
-	uint8_t i = 0;
+	uint8_t PWRMONStatus = OFF; 	//PWRMON status, initialize to OFF
+	uint8_t VBUSStatus = OFF; 		//VBUS status, initialize to OFF
+	uint8_t	AutoOn = OFF;			//Auto On signal, initialize to OFF
+	uint8_t i = 0;					//General Counter, initialize to 0
+	
+	//Initialize the hardware on bootup
+	Hardware_Init();
 
+	//Delay slightly to let I/O settle
+	_delay_ms(10);
 
+	Modem_Reset();
 
-	Hardware_Init(); //Set I/O
-
-	_delay_ms(10); //Delay 10mS to let I/O settle
-
-	GSM_Reset(); //Hold the modem in reset upon startup.
-
-	_delay_ms(10); //Delay 10mS to let I/O settle
-
-	//We can enable the watchdog for up to 8 seconds on the ATTiny24 using the below function
-	//wdt_enable(WDTO_8S);
-
-	//Reset the watchdog timer.
-	//wdt_reset(); 
-
-
-
+	/*
+	//LED Timing test
 	while (1)
 	{
+		VBUS_ENABLE
+		_delay_ms(1000);
+		VBUS_DISABLE
+		_delay_ms(1000);
+	}
+	*/
 
-		//Reset the watchdog timer.
-		//wdt_reset(); 
 
-		//Check if we are running with Auto-On
-
-		AutoOn = AutoOn_Task(); //boolean
-
-		RS232_Task(); //Run the RS232 task to disable/enable the transceivers. This should happen every loop.
-
+	/********************
+	Begin
+	********************/
+	while (1)
+	{
+		AutoOn = GetAutoOn();		//Check if we are running with Auto-On
+		PWRMONStatus = GetPWRMON();	//Update PWRMON status
 		
-		if (AutoOn == false)
-		{ //Auto on is not being used, read PWRMON and act accordingly. This mainly adjusts VBUS since RS232 task already handles the transceivers.
-			
-			IsPWRMONOn = Get_PWRMONStatus();
+		//Auto on is not being used, read PWRMON and act accordingly.
+		if (!AutoOn)
+		{ 
 
 			//If PWRMON is read as being HIGH, we wait 7 seconds (5s ON/OFF possible hold + 2s boot up pause after ON/OFF release).
 			//If it's already ON we don't touch it.
-			if (IsPWRMONOn == true && IsVBUSOn == false)
+			if (PWRMONStatus && !VBUSStatus)
 			{
-				_delay_ms(7000); //7s delay
-				IsVBUSOn = USB_VBUS_CNTL(ON); //Turn VBUS on
-				//wdt_reset(); //Reset the watchdog
+				DB9_Enable();					//Enable the DB9 interface for quick interaction
+				_delay_ms(7000); 				//7s delay
+				VBUSStatus = Set_VBUS(ON);		//Turn VBUS Channel ON for readiness to the user
+				V18_ENABLE						//Turn on the CODEC supply
 			}
 
-			//If PWRMON is read as being LOW, we turn VBUS off. If it's already OFF we don't touch it. 
-			else if (IsPWRMONOn == false && IsVBUSOn == true)
+			//If PWRMON is read as being LOW, we turn VBUS off. If the interfaces are already OFF we don't touch it. 
+			else if (!PWRMONStatus && VBUSStatus)
 			{
-				IsVBUSOn = USB_VBUS_CNTL(OFF); //Turn VBUS off
+				DB9_Disable();					//Kill the DB9 interface
+				VBUSStatus = Set_VBUS(OFF); 	//Turn VBUS off
+				V18_DISABLE						//Kill the CODEC supply
 			}
 
 
 		} //If end
 
-		else //Automatic turn on, check for PWRMON and act accordingly. Attempt turn on, if turn on is OK enable VBUS
+		//Automatic turn on, check for PWRMON and act accordingly. Attempt turn on, if turn on is OK enable VBUS
+		else
 		{
 
-			IsPWRMONOn = Get_PWRMONStatus();
-
-			while (IsPWRMONOn == false && i <= 4)
+			while (!PWRMONStatus && i <= POWERUP_TRIES)
 			{
-				
-				GSM_TurnON();
+				_delay_ms(1000);				//Wait 1s per the Telit timing chart (supply activated, wait 1s before trying ON/OFF)
+				Modem_TurnON(STD_ONOFF_TIME);	//Toggle ON/OFF Low for 3s
 
-				_delay_ms(4000); //Wait for 4 seconds before reading again to give it time to properly start 
-								 //(3 second turn on + 4 second delay = 7 seconds, matches above)
+				_delay_ms(3000); 			//Wait for the modem to warm up
+				i++; 						//increment counter
+				PWRMONStatus = GetPWRMON(); //Update PWRMON status
 
-				//wdt_reset(); //Reset the watchdog, ON/OFF
-				
-				i++; //increment counter
-
-				IsPWRMONOn = Get_PWRMONStatus(); //Update PWRMOn status
 			} //If End
 
-			if (IsPWRMONOn == false && i >= 4)
+			//Attempts failed
+			if (!PWRMONStatus && i >= POWERUP_TRIES)
 			{
-				GSM_Reset(); //If we've tried at least 5 times and still no turn on, hit the reset signal for 1s to hardware reboot the modem. 
+				Modem_Reset(); //If we've tried at least 5 times and still no turn on, hit the reset signal for 1s to hardware reboot the modem. 
 			}
 
 			i = 0; //Reset counter if it passes or fails power on
 
 
-			//If PWRMON is read as being HIGH, turn on VBUS. We've already waited 5s (3s turn on + 2s delay)
-			//If it's already ON we don't touch it.
-			if (IsPWRMONOn == true && IsVBUSOn == false)
+			//If PWRMON is read as being HIGH, turn on the interfaces. We've already waited 5s (3s turn on + 3s delay)
+			//If the interfaces are ON we don't touch it.
+			if (PWRMONStatus && !VBUSStatus)
 			{
-				IsVBUSOn = USB_VBUS_CNTL(ON); //Turn VBUS on
+				DB9_Enable();					//Enable the DB9 interface for quick interaction
+				VBUSStatus = Set_VBUS(ON);		//Turn VBUS Channel ON for readiness to the user
+				V18_ENABLE						//Turn on the CODEC supply
 			}
 
 			//If PWRMON is read as being LOW, we turn VBUS off. If it's already OFF we don't touch it. 
-			else if (IsPWRMONOn == false && IsVBUSOn == true)
+			else if (!PWRMONStatus && VBUSStatus)
 			{
-				IsVBUSOn = USB_VBUS_CNTL(OFF); //Turn VBUS off
+				DB9_Disable();					//Kill the DB9 interface
+				VBUSStatus = Set_VBUS(OFF); 	//Turn VBUS off
+				V18_DISABLE						//Kill the CODEC supply
 			}
-
-
 
 		}//else end
 
